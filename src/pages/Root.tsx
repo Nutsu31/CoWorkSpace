@@ -10,6 +10,7 @@ const Root = () => {
         display: "flex",
         flexDirection: "column",
         gap: 10,
+        backgroundColor: "#123B53",
       }}
     >
       <Navbar />
