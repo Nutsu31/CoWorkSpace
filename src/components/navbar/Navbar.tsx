@@ -1,8 +1,8 @@
 import React from "react";
-import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BiLogIn } from "react-icons/bi";
+import StyledButtons from "./StyledButtons";
 
 const styles = {
   header: {
@@ -54,6 +54,7 @@ const Navbar = () => {
           <Link style={styles.links} to="/register">
             რეგისტრაცია
           </Link>
+          <StyledButtons/>
         </div>
       </div>
     </HeaderDiv>
