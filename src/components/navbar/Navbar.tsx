@@ -9,7 +9,7 @@ const styles = {
   header: {
     width: "100%",
     height: "1000px",
-    padding: "60px 80px",
+    padding: "60px 80px ",
     background: `url(${HeaderBg}) `,
     backgroundPosition: "right",
     backgroundRepeat: "no-repeat",
@@ -22,10 +22,11 @@ const styles = {
     alignItems: "center",
   },
   linksWrapper: {
-    width: "800px",
+    width: "1200px",
     display: "flex",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
+    gap: "120px",
     color: "black",
   },
   links: {
