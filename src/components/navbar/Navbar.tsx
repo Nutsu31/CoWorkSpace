@@ -1,9 +1,7 @@
 import React from "react";
-import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { BiLogIn } from "react-icons/bi";
-import HeaderBg from "../../assets/headerbg.png";
 
 const styles = {
   header: {
@@ -64,38 +62,31 @@ const styles = {
 
 const Navbar = () => {
   return (
-    <div style={styles.header}>
-      <div style={styles.navigation}>
+    <HeaderDiv>
+      <div>
+        <h1 style={styles.logo}>CoWork-Space</h1>
+      </div>
+      <div style={styles.linksWrapper}>
+        <Link style={styles.links} to="/">
+          Home
+        </Link>
+        <Link style={styles.links} to="/about-us">
+          ჩვენს შესახებ
+        </Link>
+        <Link style={styles.links} to="/contact">
+          კონტაქტი
+        </Link>
         <div>
-          <h1 style={styles.logo}>
-            <div style={styles.logoStartBox}>
-              <span>Co</span>
-            </div>
-            Work-Space
-          </h1>
-        </div>
-        <div style={styles.linksWrapper}>
-          <Link style={styles.links} to="/">
-            Home
+          <Link style={styles.links} to="/login">
+            <BiLogIn /> შესვლა
           </Link>
-          <Link style={styles.links} to="/about-us">
-            ჩვენს შესახებ
+          /
+          <Link style={styles.links} to="/register">
+            რეგისტრაცია
           </Link>
-          <Link style={styles.links} to="/contact">
-            კონტაქტი
-          </Link>
-          <div style={styles.loginAndRegisterDiv}>
-            <Link style={styles.loninAndRegister} to="/login">
-              <BiLogIn /> შესვლა
-            </Link>
-
-            <Link style={styles.loninAndRegister} to="/register">
-              რეგისტრაცია
-            </Link>
-          </div>
         </div>
       </div>
-    </div>
+    </HeaderDiv>
   );
 };
 

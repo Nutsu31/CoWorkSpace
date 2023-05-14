@@ -9,6 +9,7 @@ const Root = () => {
         height: "100vh",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center",
         gap: 10,
         backgroundColor: "#123B53",
       }}
