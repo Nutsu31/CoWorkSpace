@@ -10,8 +10,7 @@ import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Register from "./pages/Register";
-import LoginPage from "./pages/LoginPage";
+import JoisUs from "./pages/JoisUs";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,9 +19,8 @@ const router = createBrowserRouter(
         <Route index element={<HomePage />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/join-us" element={<JoisUs />} />
       </Route>
-      <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<LoginPage />} />
     </>
   )
 );
