@@ -1,0 +1,20 @@
+.co{
+    width: 51px;
+    height: 41px;
+    background: #A9DEEE;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.coText{
+    color:#123B53;
+}
+.logoText{
+    color: #A9DEEE;
+    font-family: 'Maven Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 33px;
+}
