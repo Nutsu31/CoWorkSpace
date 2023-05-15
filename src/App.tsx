@@ -10,8 +10,8 @@ import Root from "./pages/Root";
 import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
-import Login from "./pages/Login";
 import Register from "./pages/Register";
+import LoginPage from "./pages/LoginPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
       </Route>
       <Route path="/register" element={<Register />} />
-      <Route path="/login" element={<Login />} />
+      <Route path="/login" element={<LoginPage />} />
     </>
   )
 );

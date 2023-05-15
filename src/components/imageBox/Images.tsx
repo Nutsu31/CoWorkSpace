@@ -1,12 +1,14 @@
 import React from "react";
 import Banner1 from "../../assets/1965773.png";
+import { motion } from "framer-motion";
+
 const Images = () => {
   return (
-    <div style={styles.container}>
+    <motion.div style={styles.container}>
       <div style={styles.image}>
         <img src={Banner1} alt="banner  " />
       </div>
-    </div>
+    </motion.div>
   );
 };
 

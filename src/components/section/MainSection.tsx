@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../titles/Title";
 import Images from "../imageBox/Images";
+import { motion } from "framer-motion";
 
 const MainSection = () => {
   const title = {

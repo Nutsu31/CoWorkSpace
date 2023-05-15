@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { BiLogIn } from "react-icons/bi";
 import HeaderBg from "../../assets/headerbg.png";
 import MainSection from "./MainSection";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [scrollY, setScrollY] = useState(true);
@@ -59,7 +60,7 @@ const styles = {
   header: {
     width: "100%",
     height: "1000px",
-    padding: "60px 100px",
+    padding: "4rem 100px",
     background: `url(${HeaderBg}) `,
     backgroundPosition: "right",
     backgroundRepeat: "no-repeat",
