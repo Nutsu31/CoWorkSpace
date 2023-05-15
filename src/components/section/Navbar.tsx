@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -7,6 +7,12 @@ import HeaderBg from "../../assets/headerbg.png";
 import MainSection from "./MainSection";
 
 const Navbar = () => {
+  const [scrollY, setScrollY] = useState(true);
+
+  useEffect(() => {
+    window.scrollTo(0, 1000);
+  }, [scrollY]);
+
   return (
     <div style={styles.header}>
       <div style={styles.navigation}>
@@ -25,9 +31,10 @@ const Navbar = () => {
           <Link style={styles.links} to="/about-us">
             ჩვენს შესახებ
           </Link>
-          <Link style={styles.links} to="/contact">
+          {/* <Link style={styles.links} to="/contact">
             კონტაქტი
-          </Link>
+          </Link> */}
+          <button onClick={() => setScrollY(!scrollY)}>sadasd</button>
           <div>
             <div style={styles.loginAndRegisterDiv}>
               <Link style={styles.loninAndRegister} to="/login">

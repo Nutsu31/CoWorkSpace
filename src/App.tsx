@@ -15,13 +15,15 @@ import Register from "./pages/Register";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Root />}>
-      <Route index element={<HomePage />} />
-      <Route path="/login" element={<Login />} />
+    <>
+      <Route path="/" element={<Root />}>
+        <Route index element={<HomePage />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+      </Route>
       <Route path="/register" element={<Register />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/contact" element={<Contact />} />
-    </Route>
+      <Route path="/login" element={<Login />} />
+    </>
   )
 );
 
