@@ -27,16 +27,6 @@ const HomePage = () => {
         {/* <Title text={title} /> */}
         <MainSection sectionNumber={1} banner={homeBanner} />
       </div>
-      <div
-        style={{
-          width: "100%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-        }}
-      >
-        <MainSection sectionNumber={2} banner={homeBanner} />
-      </div>
     </>
   );
 };
