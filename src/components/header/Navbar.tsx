@@ -18,7 +18,7 @@ const Navbar = () => {
           ჩვენს შესახებ
         </Link>
       </div>
-      <JoinUsButton />
+      <JoinUsButton num={1} />
     </div>
   );
 };

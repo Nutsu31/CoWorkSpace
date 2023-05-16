@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/header/Navbar";
-import BgImage from "../assets/headerbg.png";
+import BgImage from "../assets/Group91.png";
 import Shadow from "../components/section/Shadow";
 
 const Root = () => {
@@ -20,7 +20,6 @@ const Root = () => {
     >
       <Navbar />
       <Outlet />
-      <Shadow />
     </div>
   );
 };

@@ -20,7 +20,7 @@ const Title = ({ text }: TitleTypes) => {
       <h2></h2>
       <p className={Styles.paragrhap}>{text.paragraph}</p>
       <div className={Styles.buttonWrapper}>
-        <JoinUsButton />
+        <JoinUsButton num={2} />
         <InfoButton />
       </div>
     </div>

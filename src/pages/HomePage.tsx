@@ -19,14 +19,23 @@ const HomePage = () => {
       <div
         style={{
           width: "100%",
-          height: "76vh",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-evenly",
         }}
       >
-        <Title text={title} />
-        <MainSection banner={homeBanner} />
+        {/* <Title text={title} /> */}
+        <MainSection sectionNumber={1} banner={homeBanner} />
+      </div>
+      <div
+        style={{
+          width: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <MainSection sectionNumber={2} banner={homeBanner} />
       </div>
     </>
   );

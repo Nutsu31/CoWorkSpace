@@ -3,14 +3,17 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-const JoisUs = () => {
-  const { register, handleSubmit, reset } = useForm();
 
+const LogIn = () => {
+  const { register, handleSubmit, reset } = useForm();
   const onSubmit = handleSubmit((data) => {
     console.log(data);
     reset({
+      name: "",
+      lastname: "",
       email: "",
       password: "",
+      re_password: "",
     });
   });
 
@@ -19,8 +22,8 @@ const JoisUs = () => {
       <form onSubmit={onSubmit}>
         <FormControl
           sx={{
-            width: { xs: 300, sm: 350, md: 450, lg: 500 },
-            height: 600,
+            width: { xs: 300, sm: 350, md: 400, lg: 450 },
+            height: 400,
             padding: "60px 20px",
             backgroundColor: "#ffffffab",
             display: "flex",
@@ -29,19 +32,8 @@ const JoisUs = () => {
             borderRadius: 2,
           }}
         >
-          <h1>რეგისტრაცია</h1>
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="სახელი"
-            type="text"
-            {...register("name")}
-          />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="გვარი"
-            type="text"
-            {...register("lastname")}
-          />
+          <h1>შესვლა</h1>
+
           <TextField
             sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
             label="ელ.ფოსტა"
@@ -54,21 +46,15 @@ const JoisUs = () => {
             type="password"
             {...register("password")}
           />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="გაიმეორე პაროლი"
-            type="password"
-            {...register("re-password")}
-          />
           <Button
             sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
             variant="contained"
             type="submit"
           >
-            რეგისტრაცია
-          </Button>
-          <Link style={{ color: "#3789e7" }} to="/log-in">
             შესვლა
+          </Button>
+          <Link style={{ color: "#3789e7" }} to="/join-us">
+            ახალი ანგარიშის შექმნა
           </Link>
         </FormControl>
       </form>
@@ -76,7 +62,7 @@ const JoisUs = () => {
   );
 };
 
-export default JoisUs;
+export default LogIn;
 
 const FormWrapper = styled.div(
   () => css`
