@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/header/Navbar";
 import BgImage from "../assets/headerbg.png";
+import Shadow from "../components/section/Shadow";
 
 const Root = () => {
   return (
@@ -9,7 +10,6 @@ const Root = () => {
       style={{
         width: "100%",
         minHeight: "100vh",
-        padding: "0 150px",
         display: "flex",
         flexDirection: "column",
         gap: 10,
@@ -20,6 +20,7 @@ const Root = () => {
     >
       <Navbar />
       <Outlet />
+      <Shadow />
     </div>
   );
 };

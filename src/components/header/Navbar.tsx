@@ -17,8 +17,8 @@ const Navbar = () => {
         <Link className={styles.links} to="/about-us">
           ჩვენს შესახებ
         </Link>
-        <JoinUsButton />
       </div>
+      <JoinUsButton />
     </div>
   );
 };

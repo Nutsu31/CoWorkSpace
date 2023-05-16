@@ -3,6 +3,8 @@ import MainSection from "../components/section/MainSection";
 import Title from "../components/titles/Title";
 
 import homeBanner from "../assets/banner.jpg";
+import homeBanner1 from "../assets/1965773.png";
+import Shadow from "../components/section/Shadow";
 
 const HomePage = () => {
   const title = {
@@ -13,17 +15,20 @@ const HomePage = () => {
   };
 
   return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-evenly",
-      }}
-    >
-      <Title text={title} />
-      <MainSection banner={homeBanner} />
-    </div>
+    <>
+      <div
+        style={{
+          width: "100%",
+          height: "76vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}
+      >
+        <Title text={title} />
+        <MainSection banner={homeBanner} />
+      </div>
+    </>
   );
 };
 
