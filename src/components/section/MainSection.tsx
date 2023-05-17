@@ -23,7 +23,7 @@ const MainSection = ({ banner, sectionNumber }: MainSectionTypes) => {
         display: "flex",
         gap: 200,
         flexDirection: sectionNumber === 2 ? "row-reverse" : "row",
-        justifyContent: "space-evenly",
+        justifyContent: "center",
       }}
     >
       <Title text={title} />
