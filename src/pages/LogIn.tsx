@@ -9,11 +9,13 @@ import { baseURL } from "./Root";
 interface UserDataType {
   status: number;
   user: string;
+  isAdmin: boolean;
 }
 
 const initialValue = {
   status: 0,
   user: "",
+  isAdmin: false,
 };
 
 const LogIn = () => {
@@ -43,7 +45,9 @@ const LogIn = () => {
   });
 
   function getUserDetails() {
-    if (userData.status === 200) {
+    if (userData.isAdmin) {
+      navigate("/admin-panel");
+    } else if (userData.status === 200) {
       navigate("/profile");
     }
   }
@@ -82,7 +86,7 @@ const LogIn = () => {
             {...register("password", { required: true })}
           />
           {userData.status >= 400 ? (
-            <WrongPass status={userData?.status}>{userData?.user}</WrongPass>
+            <WrongPass status={userData?.status}>{userData.user}</WrongPass>
           ) : null}
           <Button
             sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}

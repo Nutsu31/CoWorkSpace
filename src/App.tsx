@@ -24,8 +24,8 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/join-us" element={<JoisUs />} />
         <Route path="/log-in" element={<LogIn />} />
-        <Route path="/profile" element={<UserInterface />} />
         <Route path="/admin-panel" element={<Admin />} />
+        <Route path="/profile" element={<UserInterface />} />
       </Route>
     </>
   )
