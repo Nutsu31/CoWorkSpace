@@ -4,6 +4,8 @@ import Navbar from "../components/header/Navbar";
 import BgImage from "../assets/Group91.png";
 import Shadow from "../components/section/Shadow";
 
+export const baseURL = "http://localhost:4000/";
+
 const Root = () => {
   return (
     <div

@@ -4,11 +4,9 @@ import Styles from "./button.module.css";
 
 const InfoButton = () => {
   return (
-    <div className={Styles.infoButtonWrapper}>
-      <Link className={Styles.infoLink} to="/about-us">
-        გაიგე მეტი!
-      </Link>
-    </div>
+    <Link className={Styles.infoLink} to="/about-us">
+      გაიგე მეტი!
+    </Link>
   );
 };
 

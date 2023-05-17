@@ -12,6 +12,8 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import JoisUs from "./pages/JoisUs";
 import LogIn from "./pages/LogIn";
+import UserInterface from "./pages/UserInterface";
+import Admin from "./pages/Admin";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +24,8 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/join-us" element={<JoisUs />} />
         <Route path="/log-in" element={<LogIn />} />
+        <Route path="/profile" element={<UserInterface />} />
+        <Route path="/admin-panel" element={<Admin />} />
       </Route>
     </>
   )
