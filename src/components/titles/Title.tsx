@@ -7,6 +7,7 @@ interface TitleTypes {
     styledText: string;
     unStyledText: string;
     paragraph: string;
+    paragraph2?: string;
   };
 }
 
@@ -19,6 +20,7 @@ const Title = ({ text }: TitleTypes) => {
       </h2>
       <h2></h2>
       <p className={Styles.paragrhap}>{text.paragraph}</p>
+      {text.paragraph2 ? <p className={Styles.paragrhap}>{text.paragraph2}</p> : null}
       <div className={Styles.buttonWrapper}>
         <JoinUsButton num={2} />
         <InfoButton />
