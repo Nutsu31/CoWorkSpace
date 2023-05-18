@@ -21,6 +21,7 @@ const AboutUsCss = styled.div(
   () => css`
     padding: 0 150px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 120px;
   `
 );

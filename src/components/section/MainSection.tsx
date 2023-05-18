@@ -21,7 +21,7 @@ const MainSection = ({ banner, sectionNumber }: MainSectionTypes) => {
         width: "100%",
         height: "90vh",
         display: "flex",
-        gap: 200,
+        gap: 120,
         flexDirection: sectionNumber === 2 ? "row-reverse" : "row",
         justifyContent: "center",
       }}
