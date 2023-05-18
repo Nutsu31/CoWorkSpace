@@ -7,9 +7,9 @@ import {
   TextField,
 } from "@mui/material";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { baseURL } from "./Root";
 
@@ -51,10 +51,23 @@ const JoisUs = () => {
         email: "",
         password: "",
         re_password: "",
-        developer: null,
+        developer: "",
       });
     }
   });
+  console.log(registerInfo);
+
+  const navigate = useNavigate();
+
+  function getUserDetails() {
+    if (registerInfo?.status === 200) {
+      navigate("/profile");
+    }
+  }
+
+  useEffect(() => {
+    getUserDetails();
+  }, [registerInfo]);
 
   return (
     <FormWrapper>
