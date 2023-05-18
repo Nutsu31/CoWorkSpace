@@ -11,6 +11,7 @@ export interface UserType {
   email: string;
   isAdmin: boolean;
   developer: string;
+  _id?: string;
 }
 
 const AdminRoot = () => {

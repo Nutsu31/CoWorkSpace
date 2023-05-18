@@ -29,7 +29,7 @@ const JoisUs = () => {
     } else {
       axios({
         method: "POST",
-        url: baseURL + "join-us",
+        url: baseURL + "/join-us",
         headers: {
           "Content-Type": "application/json",
         },

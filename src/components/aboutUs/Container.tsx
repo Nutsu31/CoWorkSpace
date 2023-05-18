@@ -1,20 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import StyledButtons from "../buttons/AboutUsButton";
+import PageFullInfo from "../section/details/PageFullInfo";
 
-function Container({ photo }: { photo: string }) {
+function Container({
+  photo,
+  text,
+  num,
+  setShowFullDetails,
+}: {
+  photo: string;
+  text: string;
+  num?: number;
+  setShowFullDetails: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
-    <Containercss>
+    <Containercss num={num}>
       <ImageWrapper>
         <Image src={photo} />
       </ImageWrapper>
       <TextWrapper>
-        <Info>მოკლე აღწერა</Info>
+        <Info>{text}</Info>
         <P>
-          Lorem ipsum dolor, sit amem ullam iure, r epellat alias voluptatibus
-          eum doloribus?
+          CoWorkSpace არის ადგილი, რომელიც იქნება რეალური სამუშაო გარემოსთან
+          მაქსიმალურად მიმსგავსებული, სადაც ყველა დელევოპერს შესაძლებლობა ექნება
+          განავითაროს საკუთარი თავი ,როგორც ინდივიდუალურად ისე გუნდურ მუშაობაში.
         </P>
-        <StyledButtons />
+        <StyledButtons setShowFullDetails={setShowFullDetails} />
       </TextWrapper>
       <div></div>
     </Containercss>
@@ -24,11 +36,14 @@ function Container({ photo }: { photo: string }) {
 export default Container;
 
 const Containercss = styled.div(
-  () => css`
-    height: 704px;
+  ({ num }: { num?: number }) => css`
+    height: 754px;
     width: 360px;
     border-radius: 20px;
-    background-color: rgba(250, 250, 250, 0.45);
+    /* background-color: ${num === 3
+      ? "#1090f855"
+      : "rgba(250, 250, 250, 0.45)"}; */
+    background-color: #1090f855;
     backdrop-filter: blur(45px);
     display: flex;
     flex-direction: column;
@@ -71,9 +86,9 @@ const P = styled.p(
     color: #ffffff;
     font-family: "Nunito Sans";
     font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 170%;
+    text-align: center;
   `
 );
 
