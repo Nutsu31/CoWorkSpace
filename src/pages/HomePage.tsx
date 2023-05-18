@@ -2,7 +2,7 @@ import React from "react";
 import MainSection from "../components/section/MainSection";
 import Title from "../components/titles/Title";
 
-import homeBanner from "../assets/banner.jpg";
+import homeBanner from "../assets/banner.png";
 import homeBanner1 from "../assets/1965773.png";
 import Shadow from "../components/section/Shadow";
 
