@@ -13,7 +13,10 @@ import Contact from "./pages/Contact";
 import JoisUs from "./pages/JoisUs";
 import LogIn from "./pages/LogIn";
 import UserInterface from "./pages/UserInterface";
-import Admin from "./pages/Admin";
+import AdminRoot from "./pages/AdminRoot";
+import General from "./pages/AdminPages/General";
+import Statistics from "./pages/AdminPages/Statistics";
+import Users from "./pages/AdminPages/Users";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,8 +27,14 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/join-us" element={<JoisUs />} />
         <Route path="/log-in" element={<LogIn />} />
-        <Route path="/admin-panel" element={<Admin />} />
         <Route path="/profile" element={<UserInterface />} />
+      </Route>
+
+      <Route path="/admin-panel" element={<AdminRoot />}>
+        <Route index element={<General />} />
+        <Route path="/admin-panel/general" element={<General />} />
+        <Route path="/admin-panel/statistics" element={<Statistics />} />
+        <Route path="/admin-panel/users" element={<Users />} />
       </Route>
     </>
   )

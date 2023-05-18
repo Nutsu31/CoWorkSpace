@@ -2,28 +2,30 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/header/Navbar";
 import BgImage from "../assets/Group91.png";
-import Shadow from "../components/section/Shadow";
+import styled, { css } from "styled-components";
 
-export const baseURL = "http://localhost:4000/";
+export const baseURL = "https://vast-gold-prawn-kilt.cyclic.app";
 
 const Root = () => {
   return (
-    <div
-      style={{
-        width: "100%",
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        gap: 10,
-        backgroundColor: "#123B53",
-        backgroundImage: `url(${BgImage})`,
-        backgroundSize: "cover",
-      }}
-    >
+    <RootWrapper bg={BgImage}>
       <Navbar />
       <Outlet />
-    </div>
+    </RootWrapper>
   );
 };
 
 export default Root;
+
+const RootWrapper = styled.div(
+  ({ bg }: { bg: string }) => css`
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #123b53;
+    background-image: url(${bg});
+    background-size: cover;
+  `
+);

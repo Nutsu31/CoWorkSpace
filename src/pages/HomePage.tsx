@@ -4,7 +4,6 @@ import Title from "../components/titles/Title";
 
 import homeBanner from "../assets/banner.png";
 import homeBanner1 from "../assets/1965773.png";
-import Shadow from "../components/section/Shadow";
 
 const HomePage = () => {
   const title = {
@@ -24,7 +23,6 @@ const HomePage = () => {
           justifyContent: "space-evenly",
         }}
       >
-        {/* <Title text={title} /> */}
         <MainSection sectionNumber={1} banner={homeBanner} />
       </div>
     </>
