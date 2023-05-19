@@ -34,6 +34,10 @@ const ImgWrapper = styled.div(
       width: ${innerDiv ? "300px" : "360px"};
       height: ${innerDiv ? "300px" : "360px"};
     }
+    @media (max-width: 410px) {
+      width: ${innerDiv ? "250px" : "310px"};
+      height: ${innerDiv ? "250px" : "310px"};
+    }
   `
 );
 const StyledImage = styled.img(
@@ -41,6 +45,9 @@ const StyledImage = styled.img(
     width: 500px;
     @media (max-width: 1400px) {
       width: 300px;
+    }
+    @media (max-width: 410px) {
+      width: 250px;
     }
   `
 );

@@ -56,6 +56,9 @@ const Text = styled.h2(
     @media (max-width: 1400px) {
       font-size: 40px;
     }
+    @media (max-width: 410px) {
+      font-size: 30px;
+    }
   `
 );
 
@@ -71,6 +74,9 @@ const Paragraph = styled.p(
       width: 400px;
       font-size: 16px;
     }
+    @media (max-width: 410px) {
+      width: 300px;
+    }
   `
 );
 
@@ -80,5 +86,10 @@ const ButtonWrapper = styled.div(
     display: flex;
     align-items: center;
     gap: 48px;
+    @media (max-width: 460px) {
+      flex-direction: column;
+      height: 200px;
+      gap: 24px;
+    }
   `
 );
