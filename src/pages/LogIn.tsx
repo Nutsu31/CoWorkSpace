@@ -27,7 +27,7 @@ const LogIn = () => {
   const onSubmit = handleSubmit((data) => {
     axios({
       method: "POST",
-      url: baseURL + "login",
+      url: baseURL + "/login",
       headers: {
         "Content-Type": "application/json",
       },

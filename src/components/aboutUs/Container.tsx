@@ -28,7 +28,7 @@ const Containercss = styled.div(
     height: 704px;
     width: 360px;
     border-radius: 20px;
-    background-color: rgba(250, 250, 250, 0.45);
+    background-color: rgba(193, 193, 193, 1);
     backdrop-filter: blur(45px);
     display: flex;
     flex-direction: column;
@@ -46,8 +46,8 @@ const ImageWrapper = styled.div(
   () => css`
     width: 360px;
     height: 360px;
-    background-color: rgba(122, 122, 122, 0.4);
-    border: 17px solid rgba(250, 250, 250, 0.15);
+    background-color: rgba(193, 193, 193, 1);
+    border: 17px solid #919c9f;
     border-radius: 20px;
 
     display: flex;

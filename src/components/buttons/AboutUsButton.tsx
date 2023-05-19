@@ -6,7 +6,7 @@ const styles = {
     width: "296px",
     borderRadius: "0px",
     padding: "21px 30px 21px 30px",
-    backgroundColor: "#A9DEEE",
+    backgroundColor: "#919c9f",
     fontSize: "20px",
     border: "none",
   },
