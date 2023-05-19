@@ -2,7 +2,8 @@ import React from "react";
 import styled, { css } from "styled-components";
 import Banner from "components/section/Banner";
 import bannerphoto from "assets/contact-us.svg";
-import Title from "components/titles/Title";
+import { HomeContainer } from "pages/HomePage";
+import Title from "components/section/titles/Title";
 
 const title2 = {
   styledText: "CONTACT US",
@@ -14,36 +15,11 @@ const title2 = {
 
 const Contact = () => {
   return (
-    <ContactCss>
-      <TextWrapper>
-        <Title text={title2} />
-      </TextWrapper>
+    <HomeContainer>
+      <Title text={title2} />
       <Banner banner={bannerphoto} />
-    </ContactCss>
+    </HomeContainer>
   );
 };
 
 export default Contact;
-
-const ContactCss = styled.div(
-  () => css`
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    gap: 120px;
-    justify-content: center;
-    flex-direction: row;
-  `
-);
-const TextWrapper = styled.div(
-  () => css`
-    width: 650px;
-    height: 650px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    text-align: left;
-    flex-direction: column;
-    gap: 16px;
-  `
-);

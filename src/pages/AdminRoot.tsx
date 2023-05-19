@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import Dashboard from "components/admin/Dashboard";
+import Dashboard from "../components/admin/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 export interface UserType {
   name: string;

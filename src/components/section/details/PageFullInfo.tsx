@@ -1,4 +1,5 @@
 import { Close } from "@mui/icons-material";
+import { motion } from "framer-motion";
 import React from "react";
 import styled, { css } from "styled-components";
 
@@ -8,8 +9,38 @@ const PageFullInfo = ({
   setShowFullDetails: React.Dispatch<React.SetStateAction<boolean>>;
 }) => {
   return (
-    <OuterDiv>
-      <InnerDiv>
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.4 }}
+      style={{
+        width: "100%",
+        height: "110vh",
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        translate: "-50% -50%",
+        backgroundColor: "rgba(0,0,0,0.7)",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <motion.div
+        layout
+        style={{
+          borderRadius: 20,
+          width: 750,
+          height: 700,
+          backgroundColor: "rgba(190, 190, 190, 1)",
+          position: "relative",
+        }}
+        initial={{ y: 10, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        exit={{ y: -10, opacity: 0 }}
+        transition={{ duration: 0.2 }}
+      >
         <Close
           sx={{
             position: "absolute",
@@ -20,8 +51,9 @@ const PageFullInfo = ({
           }}
           onClick={() => setShowFullDetails((curr) => (curr = false))}
         />
-      </InnerDiv>
-    </OuterDiv>
+        <h1>alex</h1>
+      </motion.div>
+    </motion.div>
   );
 };
 
@@ -45,7 +77,7 @@ const InnerDiv = styled.div(
   () => css`
     width: 800px;
     height: 700px;
-    background-color: rgba(193, 193, 193, 1);
+    background-color: rgba(190, 190, 190, 0.9);
     position: relative;
   `
 );

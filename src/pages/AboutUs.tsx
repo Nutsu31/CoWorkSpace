@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Container from "../components/aboutUs/Container";
+import Container from "components/aboutUs/Container";
 import styled, { css } from "styled-components";
 import photo1 from "../assets/1965773.png";
-import PageFullInfo from "../components/section/details/PageFullInfo";
+import PageFullInfo from "components/section/details/PageFullInfo";
 
 const AboutUs = () => {
   const [showFullDetails, setShowFullDetails] = useState(false);
