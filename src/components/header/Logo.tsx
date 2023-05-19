@@ -4,12 +4,12 @@ import styles from "./logo.module.css";
 const Logo = () => {
   return (
     <div>
-      <h1 className={styles.logoText}>
+      <Link to="/" className={styles.logoText}>
         <div className={styles.co}>
           <span className={styles.coText}>CO</span>
         </div>
         Work-Space
-      </h1>
+      </Link>
     </div>
   );
 };

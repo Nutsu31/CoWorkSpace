@@ -7,7 +7,6 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Root from "./pages/Root";
-import HomePage from "./pages/HomePage";
 import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import JoisUs from "./pages/JoisUs";
@@ -17,6 +16,7 @@ import AdminRoot from "./pages/AdminRoot";
 import General from "./pages/AdminPages/General";
 import Statistics from "./pages/AdminPages/Statistics";
 import Users from "./pages/AdminPages/Users";
+import HomePage from "pages/HomePage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

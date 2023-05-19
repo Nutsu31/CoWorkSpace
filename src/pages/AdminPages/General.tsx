@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { Person } from "@mui/icons-material";
 import { baseURL } from "../Root";
@@ -7,6 +7,7 @@ import { UserType } from "../AdminRoot";
 
 const General = () => {
   const [admins, setAdmins] = useState<Array<UserType>>([]);
+
   useEffect(() => {
     async function getData() {
       const res = await axios.get(baseURL + "/admin-panel/general");

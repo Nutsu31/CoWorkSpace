@@ -25,6 +25,7 @@ const LogIn = () => {
 
   console.log(userData);
   const onSubmit = handleSubmit((data) => {
+    console.log(data);
     axios({
       method: "POST",
       url: baseURL + "/login",

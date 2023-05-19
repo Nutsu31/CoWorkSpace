@@ -2,6 +2,8 @@ import React from "react";
 
 const styles = {
   buttons: {
+    color: "#123B53",
+    fontWeight: 600,
     height: "69px",
     width: "296px",
     borderRadius: "0px",
@@ -11,8 +13,19 @@ const styles = {
     border: "none",
   },
 };
-const StyledButtons = () => {
-  return <button style={styles.buttons}>nika</button>;
+const StyledButtons = ({
+  setShowFullDetails,
+}: {
+  setShowFullDetails: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
+  return (
+    <button
+      style={styles.buttons}
+      onClick={() => setShowFullDetails((curr) => !curr)}
+    >
+      დეტალურად
+    </button>
+  );
 };
 
 export default StyledButtons;
