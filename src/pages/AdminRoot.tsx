@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { Outlet, useLocation } from "react-router-dom";
 import styled, { css } from "styled-components";
-import axios from "axios";
-import { baseURL } from "./Root";
-import Dashboard from "../components/admin/Dashboard";
-
+import Dashboard from "components/admin/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 export interface UserType {
   name: string;
   lastname: string;
@@ -18,7 +14,7 @@ const AdminRoot = () => {
   return (
     <AdminRootContainer>
       <Dashboard />
-      <Outlet />
+      <PrivateRoute />
     </AdminRootContainer>
   );
 };

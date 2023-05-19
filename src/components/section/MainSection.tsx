@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./Banner";
-import Title from "../titles/Title";
+import Title from "components/titles/Title";
 
 interface MainSectionTypes {
   banner: string;

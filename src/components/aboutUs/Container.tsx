@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import StyledButtons from "../buttons/AboutUsButton";
-import PageFullInfo from "../section/details/PageFullInfo";
 
 function Container({
   photo,

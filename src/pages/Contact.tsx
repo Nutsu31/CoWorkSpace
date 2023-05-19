@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import Banner from "../components/section/Banner";
-import bannerphoto from "../assets/contact-us.svg";
-import Title from "../components/titles/Title";
+import Banner from "components/section/Banner";
+import bannerphoto from "assets/contact-us.svg";
+import Title from "components/titles/Title";
 
 const title2 = {
   styledText: "CONTACT US",
