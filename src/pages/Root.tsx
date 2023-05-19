@@ -27,5 +27,6 @@ const RootWrapper = styled.div(
     background-color: #123b53;
     background-image: url(${bg});
     background-size: cover;
+    overflow-x: hidden;
   `
 );
