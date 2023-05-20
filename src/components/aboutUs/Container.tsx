@@ -52,6 +52,7 @@ const Containercss = styled.div(
     backdrop-filter: blur(45px);
     display: flex;
     flex-direction: column;
+    position: relative;
     gap: 25px;
     @media (max-width: 450px) {
       width: 320px;
