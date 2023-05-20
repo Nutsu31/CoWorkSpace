@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Container from "components/aboutUs/Container";
 import styled, { css } from "styled-components";
 import photo1 from "../assets/1965773.png";
+import HowWeWork from "../assets/howWeWork.svg";
+import WeAreAsking from "../assets/weAreAsking.png";
+import ProjectGoal from "../assets/projectGoal.png";
 
 const AboutUs = () => {
   const [showFullDetails, setShowFullDetails] = useState(0);
@@ -67,21 +70,21 @@ const AboutUs = () => {
           num={1}
         />
         <Container
-          photo={photo1}
+          photo={ProjectGoal}
           text={aboutUsTitle2}
           setShowFullDetails={setShowFullDetails}
           showFullDetails={showFullDetails}
           num={2}
         />
         <Container
-          photo={photo1}
+          photo={HowWeWork}
           text={aboutUsTitle3}
           num={3}
           setShowFullDetails={setShowFullDetails}
           showFullDetails={showFullDetails}
         />
         <Container
-          photo={photo1}
+          photo={WeAreAsking}
           text={aboutUsTitle4}
           num={4}
           setShowFullDetails={setShowFullDetails}

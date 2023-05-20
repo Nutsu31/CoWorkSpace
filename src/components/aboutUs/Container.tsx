@@ -42,18 +42,21 @@ export default Container;
 const Containercss = styled.div(
   ({ num, showFullDetails }: { num?: number; showFullDetails: number }) => css`
     height: 360px;
-    width: 774px;
+    width: 650px;
     border-radius: 20px;
-    background-color: #1090f855;
+    background-color: #3a5c77;
     backdrop-filter: blur(45px);
     display: flex;
     position: relative;
-    gap: 25px;
+    gap: 16px;
+    @media (max-width: 1655px) {
+      width: 1400px;
+    }
     @media (max-width: 745px) {
       width: 320px;
       height: 774px;
       flex-direction: column;
-      background: ${showFullDetails === num ? "none" : "#1090f855"};
+      background: ${showFullDetails === num ? "none" : "#3a5c77"};
       backdrop-filter: ${showFullDetails === num ? "blur(0)" : "blur(45px)"};
     }
     @media (max-width: 350px) {
@@ -64,7 +67,10 @@ const Containercss = styled.div(
 
 const Image = styled.img(
   () => css`
-    width: 330px;
+    width: 290px;
+    @media (max-width: 1655px) {
+      width: 310px;
+    }
     @media (max-width: 745px) {
       width: 290px;
     }
@@ -76,15 +82,18 @@ const Image = styled.img(
 
 const ImageWrapper = styled.div(
   () => css`
-    width: 360px;
+    width: 310px;
     height: 360px;
-    background-color: rgba(193, 193, 193, 1);
-    border: 17px solid #919c9f;
+    background-color: rgba(18, 59, 83, 1);
+    border: 13px solid #55adc5b7;
     border-radius: 20px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1655px) {
+      width: 360px;
+    }
     @media (max-width: 745px) {
       width: 320px;
     }
