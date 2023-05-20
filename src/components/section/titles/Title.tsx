@@ -16,7 +16,7 @@ const Title = ({ text }: TitleTypes) => {
     <TextWrapper>
       <Text>
         {text.styledText}
-        <Text whiteText={text.unStyledText}>{text.unStyledText}</Text>
+        <TextWtihe>{text.unStyledText}</TextWtihe>
       </Text>
       <Paragraph>{text.paragraph}</Paragraph>
       {text.paragraph2 ? <Paragraph>{text.paragraph2}</Paragraph> : null}
@@ -45,14 +45,32 @@ const TextWrapper = styled.div(
     }
   `
 );
-const Text = styled.h2(
-  ({ whiteText }: { whiteText?: string }) => css`
+const Text = styled.p(
+  () => css`
     font-family: "Maven Pro";
     font-style: normal;
     font-weight: 700;
     font-size: 52px;
     line-height: 140%;
-    color: ${whiteText ? "#ffffff" : "#A9DEEE"};
+    display: flex;
+    flex-direction: column;
+    color: #a9deee;
+    @media (max-width: 1400px) {
+      font-size: 40px;
+    }
+    @media (max-width: 410px) {
+      font-size: 30px;
+    }
+  `
+);
+const TextWtihe = styled.span(
+  () => css`
+    font-family: "Maven Pro";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 140%;
+    color: #ffffff;
     @media (max-width: 1400px) {
       font-size: 40px;
     }
