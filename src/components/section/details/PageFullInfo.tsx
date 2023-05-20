@@ -1,4 +1,5 @@
 import { Close } from "@mui/icons-material";
+import { useMediaQuery } from "@mui/material";
 import JoinUsButton from "components/buttons/JoinUsButton";
 import { motion } from "framer-motion";
 import React from "react";
@@ -14,6 +15,7 @@ const PageFullInfo = ({
   };
   setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) => {
+  const media = useMediaQuery("(max-width:745px)");
   return (
     <motion.div
       initial={{ y: 10, opacity: 0 }}
@@ -22,7 +24,7 @@ const PageFullInfo = ({
       transition={{ duration: 0.4 }}
       style={{
         width: "100%",
-        height: "774px",
+        maxHeight: media ? "774px" : "374px",
         display: "flex",
         flexDirection: "column",
         gap: 24,

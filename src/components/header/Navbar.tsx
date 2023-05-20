@@ -52,7 +52,7 @@ const Navigation = styled.div(
     justify-content: space-between;
     position: relative;
 
-    @media (max-width: 550px) {
+    @media (max-width: 1350px) {
       padding: 0;
       justify-content: center;
       height: 160px;

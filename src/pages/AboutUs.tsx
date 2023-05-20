@@ -17,7 +17,7 @@ const AboutUs = () => {
   const aboutUsTitle2 = {
     title: "პროექტის მიზანი",
     shortTxt:
-      "CoWorkSpaceში დასაწყისისთვის გვექნება Discord სერვერი, სადაც ადამიანები შემოვლენ გაივლიან მარტივ გამოცდას და შემდეგ მათ მიენიჭებათ დონეები (Level 1დან Level 10_მდე). გამოცდის ჩაბარების შემდეგ ყველა გამოცდილ თუ გამოუცდელ დეველოპერს მიენიჭება level 1...",
+      "CoWorkSpaceში დასაწყისისთვის გვექნება Discord სერვერი, სადაც ადამიანები შემოვლენ გაივლიან მარტივ გამოცდას და შემდეგ მათ მიენიჭებათ დონეები (Level 1დან Level 10_მდე). გამოცდის ჩაბარების შემდეგ ყველა გამოცდილ თუ ...",
     text: "CoWorkSpaceში დასაწყისისთვის გვექნება Discord სერვერი, სადაც ადამიანები შემოვლენ გაივლიან მარტივ გამოცდას და შემდეგ მათ\
     მიენიჭებათ დონეები (Level 1დან Level 10_მდე). გამოცდის ჩაბარების შემდეგ ყველა გამოცდილ თუ გამოუცდელ დეველოპერს მიენიჭება level 1,\
     დონეები გაიზრდება შესრულებული გუნდური პროექტებიდან გამომდინარე. დონეებთან ერთად გაიზრდება დავალებების სირთულეც, ხოლო, როდესაც\
@@ -28,7 +28,7 @@ const AboutUs = () => {
   const aboutUsTitle3 = {
     title: "მუშაობის პროცესი",
     shortTxt:
-      "შემადგენლობა: გუნდების შემადგენლობა შესაძლებელია შემდეგნაირად: ვარიანტი 1(Front-end Developer, Back-end Developer) ვარიანტი 2(Front-end Developer, Back-end Developer და Full-stack Developer) ვარიანტი 3(მხოლოდ Full-stack Developer) მოვალეობები და მოთხოვნები: Level 1 -...",
+      "შემადგენლობა: გუნდების შემადგენლობა შესაძლებელია შემდეგნაირად: ვარიანტი 1(Front-end Developer, Back-end Developer) ვარიანტი 2(Front-end Developer, Back-end Developer და Full-stack Developer) ვარიანტი ...",
     text: "შემადგენლობა: \
     გუნდების შემადგენლობა შესაძლებელია შემდეგნაირად:\
     ვარიანტი 1(Front-end Developer, Back-end Developer)\
@@ -99,12 +99,17 @@ const AboutUsCss = styled.div(
     padding: 0 150px;
     display: flex;
     justify-content: space-evenly;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 56px;
     @media (max-width: 1380px) {
       gap: 60px;
     }
     @media (max-width: 1230px) {
       gap: 40px;
-      flex-wrap: wrap;
+    }
+    @media (max-width: 745px) {
+      min-height: 200vh;
     }
   `
 );

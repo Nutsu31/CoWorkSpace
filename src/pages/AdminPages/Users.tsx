@@ -18,7 +18,7 @@ const Users = () => {
   return (
     <UsersWrapper>
       {users.map((user) => (
-        <UserInfoWrapper>
+        <UserInfoWrapper key={Math.random() * Math.random()}>
           <Person />
           <span>{user?._id}</span>
           <span>{user.name}</span>

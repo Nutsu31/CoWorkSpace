@@ -41,18 +41,20 @@ export default Container;
 
 const Containercss = styled.div(
   ({ num, showFullDetails }: { num?: number; showFullDetails: number }) => css`
-    height: 774px;
-    width: 360px;
+    height: 360px;
+    width: 774px;
     border-radius: 20px;
-    background-color: rgba(193, 193, 193, 1);
     background-color: #1090f855;
     backdrop-filter: blur(45px);
     display: flex;
-    flex-direction: column;
     position: relative;
     gap: 25px;
-    @media (max-width: 450px) {
+    @media (max-width: 745px) {
       width: 320px;
+      height: 774px;
+      flex-direction: column;
+      background: ${showFullDetails === num ? "none" : "#1090f855"};
+      backdrop-filter: ${showFullDetails === num ? "blur(0)" : "blur(45px)"};
     }
     @media (max-width: 350px) {
       width: 300px;
@@ -63,7 +65,7 @@ const Containercss = styled.div(
 const Image = styled.img(
   () => css`
     width: 330px;
-    @media (max-width: 450px) {
+    @media (max-width: 745px) {
       width: 290px;
     }
     @media (max-width: 350px) {
@@ -83,7 +85,7 @@ const ImageWrapper = styled.div(
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 450px) {
+    @media (max-width: 745px) {
       width: 320px;
     }
     @media (max-width: 350px) {
