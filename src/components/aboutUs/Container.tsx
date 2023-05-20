@@ -1,17 +1,20 @@
 import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import StyledButtons from "../buttons/AboutUsButton";
+import PageFullInfo from "components/section/details/PageFullInfo";
 
 function Container({
   photo,
   text,
   num,
+  showFullDetails,
   setShowFullDetails,
 }: {
   photo: string;
   text: string;
-  num?: number;
-  setShowFullDetails: React.Dispatch<React.SetStateAction<boolean>>;
+  num: number;
+  showFullDetails: number;
+  setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) {
   return (
     <Containercss num={num}>
@@ -25,9 +28,11 @@ function Container({
           მაქსიმალურად მიმსგავსებული, სადაც ყველა დელევოპერს შესაძლებლობა ექნება
           განავითაროს საკუთარი თავი ,როგორც ინდივიდუალურად ისე გუნდურ მუშაობაში.
         </P>
-        <StyledButtons setShowFullDetails={setShowFullDetails} />
+        <StyledButtons setShowFullDetails={setShowFullDetails} num={num} />
       </TextWrapper>
-      <div></div>
+      {showFullDetails === num ? (
+        <PageFullInfo setShowFullDetails={setShowFullDetails} text={text} />
+      ) : null}
     </Containercss>
   );
 }

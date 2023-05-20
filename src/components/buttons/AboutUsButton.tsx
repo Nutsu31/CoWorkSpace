@@ -14,15 +14,14 @@ const styles = {
   },
 };
 const StyledButtons = ({
+  num,
   setShowFullDetails,
 }: {
-  setShowFullDetails: React.Dispatch<React.SetStateAction<boolean>>;
+  num: number;
+  setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
-    <button
-      style={styles.buttons}
-      onClick={() => setShowFullDetails((curr) => !curr)}
-    >
+    <button style={styles.buttons} onClick={() => setShowFullDetails(num)}>
       დეტალურად
     </button>
   );

@@ -45,7 +45,7 @@ export default Navbar;
 const Navigation = styled.div(
   () => css`
     width: 100%;
-    height: 214px;
+    height: 164px;
     padding: 0 156px;
     display: flex;
     align-items: center;

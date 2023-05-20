@@ -26,5 +26,8 @@ const LinkWrapper = styled.div(
     &:hover {
       background-color: #041a27;
     }
+    @media (max-width: 1360px) {
+      background-color: #346a8a;
+    }
   `
 );

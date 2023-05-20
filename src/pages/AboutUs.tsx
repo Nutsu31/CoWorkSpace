@@ -5,7 +5,7 @@ import photo1 from "../assets/1965773.png";
 import PageFullInfo from "components/section/details/PageFullInfo";
 
 const AboutUs = () => {
-  const [showFullDetails, setShowFullDetails] = useState(false);
+  const [showFullDetails, setShowFullDetails] = useState(0);
 
   const aboutUsTitle1 = "პროექტის შესახებ";
   const aboutUsTitle2 = "პროექტის მიზანი";
@@ -18,21 +18,23 @@ const AboutUs = () => {
           photo={photo1}
           text={aboutUsTitle1}
           setShowFullDetails={setShowFullDetails}
+          showFullDetails={showFullDetails}
+          num={1}
         />
         <Container
           photo={photo1}
           text={aboutUsTitle2}
           setShowFullDetails={setShowFullDetails}
+          showFullDetails={showFullDetails}
+          num={2}
         />
         <Container
           photo={photo1}
           text={aboutUsTitle3}
           num={3}
           setShowFullDetails={setShowFullDetails}
+          showFullDetails={showFullDetails}
         />
-        {showFullDetails ? (
-          <PageFullInfo setShowFullDetails={setShowFullDetails} />
-        ) : null}
       </AboutUsCss>
     </div>
   );
