@@ -41,9 +41,7 @@ export default Container;
 
 const Containercss = styled.div(
   ({ num, showFullDetails }: { num?: number; showFullDetails: number }) => css`
-    height: ${showFullDetails === num && showFullDetails !== 1
-      ? "900px"
-      : "774px"};
+    height: 774px;
     width: 360px;
     border-radius: 20px;
     background-color: rgba(193, 193, 193, 1);

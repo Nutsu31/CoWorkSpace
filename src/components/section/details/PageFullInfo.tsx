@@ -22,7 +22,7 @@ const PageFullInfo = ({
       transition={{ duration: 0.4 }}
       style={{
         width: "100%",
-        minHeight: "774px",
+        height: "774px",
         display: "flex",
         flexDirection: "column",
         gap: 24,
@@ -33,6 +33,7 @@ const PageFullInfo = ({
         border: "1px solid #72bde9",
         borderRadius: 20,
         padding: "60px 20px",
+        overflowY: "scroll",
       }}
     >
       <Close
@@ -65,5 +66,6 @@ const HeaderText = styled.h1(
 const BodyText = styled.p(
   () => css`
     color: #b6b6b6;
+    line-height: 175%;
   `
 );

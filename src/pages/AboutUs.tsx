@@ -47,6 +47,14 @@ const AboutUs = () => {
     თქვენ არ ხართ ვალდებული დაეხმაროთ level 1 და level 2, მაგრამ თუ დაეხმარებით არაფერი არ დაშავდება და მოტივაცია იქნება მათთვისაც, რომ \
     თქვენამდე მოვიდნენ.",
   };
+  const aboutUsTitle4 = {
+    title: "პროექტის მოტხოვნები",
+    shortTxt:
+      "აუცილებელია იყოთ ჯუნიორის დონის (Front-end (Javascript, React, Git), Back-End(Javascript, Node.js, Database, Git)...\
+      და Full-stack(Javascript, React, Node.js, DataBase, Git) დამატებით თქვენ თუ მეტი frameWork_ები იცით ეს უკვე თქვენი პლიუსია)...",
+    text: "აუცილებელია იყოთ ჯუნიორის დონის (Front-end (Javascript, React, Git), Back-End(Javascript, Node.js, Database, Git)\
+    და Full-stack(Javascript, React, Node.js, DataBase, Git) დამატებით თქვენ თუ მეტი frameWork_ები იცით ეს უკვე თქვენი პლიუსია)...",
+  };
 
   return (
     <div>
@@ -72,6 +80,13 @@ const AboutUs = () => {
           setShowFullDetails={setShowFullDetails}
           showFullDetails={showFullDetails}
         />
+        <Container
+          photo={photo1}
+          text={aboutUsTitle4}
+          num={4}
+          setShowFullDetails={setShowFullDetails}
+          showFullDetails={showFullDetails}
+        />
       </AboutUsCss>
     </div>
   );
@@ -83,8 +98,7 @@ const AboutUsCss = styled.div(
   () => css`
     padding: 0 150px;
     display: flex;
-    justify-content: center;
-    gap: 120px;
+    justify-content: space-evenly;
     @media (max-width: 1380px) {
       gap: 60px;
     }
