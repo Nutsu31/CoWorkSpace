@@ -8,7 +8,10 @@ const PageFullInfo = ({
   text,
   setShowFullDetails,
 }: {
-  text: string;
+  text: {
+    title: string;
+    text: string;
+  };
   setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
@@ -19,7 +22,7 @@ const PageFullInfo = ({
       transition={{ duration: 0.4 }}
       style={{
         width: "100%",
-        height: "760px",
+        minHeight: "774px",
         display: "flex",
         flexDirection: "column",
         gap: 24,
@@ -42,13 +45,8 @@ const PageFullInfo = ({
         }}
         onClick={() => setShowFullDetails(0)}
       />
-      <HeaderText>{text}</HeaderText>
-      <BodyText>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure pariatur
-        quae fuga rem reiciendis quis officia qui, sapiente soluta autem
-        reprehenderit voluptas veniam tempore doloribus inventore provident
-        consectetur ipsam. Deserunt.
-      </BodyText>
+      <HeaderText>{text.title}</HeaderText>
+      <BodyText>{text.text}</BodyText>
       <JoinUsButton num={2} />
     </motion.div>
   );

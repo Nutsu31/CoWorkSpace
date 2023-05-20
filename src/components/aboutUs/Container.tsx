@@ -11,23 +11,23 @@ function Container({
   setShowFullDetails,
 }: {
   photo: string;
-  text: string;
+  text: {
+    title: string;
+    text: string;
+    shortTxt: string;
+  };
   num: number;
   showFullDetails: number;
   setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) {
   return (
-    <Containercss num={num}>
+    <Containercss num={num} showFullDetails={showFullDetails}>
       <ImageWrapper>
         <Image src={photo} />
       </ImageWrapper>
       <TextWrapper>
-        <Info>{text}</Info>
-        <P>
-          CoWorkSpace არის ადგილი, რომელიც იქნება რეალური სამუშაო გარემოსთან
-          მაქსიმალურად მიმსგავსებული, სადაც ყველა დელევოპერს შესაძლებლობა ექნება
-          განავითაროს საკუთარი თავი ,როგორც ინდივიდუალურად ისე გუნდურ მუშაობაში.
-        </P>
+        <Info>{text.title}</Info>
+        {showFullDetails === num ? null : <P>{text.shortTxt}</P>}
         <StyledButtons setShowFullDetails={setShowFullDetails} num={num} />
       </TextWrapper>
       {showFullDetails === num ? (
@@ -40,14 +40,13 @@ function Container({
 export default Container;
 
 const Containercss = styled.div(
-  ({ num }: { num?: number }) => css`
-    height: 754px;
+  ({ num, showFullDetails }: { num?: number; showFullDetails: number }) => css`
+    height: ${showFullDetails === num && showFullDetails !== 1
+      ? "900px"
+      : "774px"};
     width: 360px;
     border-radius: 20px;
     background-color: rgba(193, 193, 193, 1);
-    /* background-color: ${num === 3
-      ? "#1090f855"
-      : "rgba(250, 250, 250, 0.45)"}; */
     background-color: #1090f855;
     backdrop-filter: blur(45px);
     display: flex;
