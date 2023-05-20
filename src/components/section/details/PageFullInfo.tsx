@@ -29,14 +29,14 @@ const PageFullInfo = ({
         translate: "-50% -50%",
         backgroundColor: "rgba(18, 59, 83, 1)",
         borderRadius: 20,
-        padding: "16px",
+        padding: "60px 20px",
       }}
     >
       <Close
         sx={{
           position: "absolute",
-          right: 16,
-          top: 16,
+          right: 30,
+          top: 30,
           color: "white",
           cursor: "pointer",
         }}
@@ -59,6 +59,9 @@ export default PageFullInfo;
 const HeaderText = styled.h1(
   () => css`
     color: #a9deee;
+    @media (max-width: 350px) {
+      font-size: 30px;
+    }
   `
 );
 const BodyText = styled.p(

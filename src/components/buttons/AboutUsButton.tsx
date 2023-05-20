@@ -1,18 +1,6 @@
 import React from "react";
+import styled, { css } from "styled-components";
 
-const styles = {
-  buttons: {
-    color: "#123B53",
-    fontWeight: 600,
-    height: "69px",
-    width: "296px",
-    borderRadius: "0px",
-    padding: "21px 30px 21px 30px",
-    backgroundColor: "#919c9f",
-    fontSize: "20px",
-    border: "none",
-  },
-};
 const StyledButtons = ({
   num,
   setShowFullDetails,
@@ -21,10 +9,26 @@ const StyledButtons = ({
   setShowFullDetails: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   return (
-    <button style={styles.buttons} onClick={() => setShowFullDetails(num)}>
+    <DetailsButton onClick={() => setShowFullDetails(num)}>
       დეტალურად
-    </button>
+    </DetailsButton>
   );
 };
 
 export default StyledButtons;
+
+const DetailsButton = styled.button(
+  () => css`
+    color: #123b53;
+    background-color: #a9deee;
+    font-weight: 600;
+    height: 70px;
+    width: 296px;
+    font-size: 20px;
+    border: none;
+    @media (max-width: 350px) {
+      width: 260px;
+      height: 60px;
+    }
+  `
+);

@@ -53,12 +53,24 @@ const Containercss = styled.div(
     display: flex;
     flex-direction: column;
     gap: 25px;
+    @media (max-width: 450px) {
+      width: 320px;
+    }
+    @media (max-width: 350px) {
+      width: 300px;
+    }
   `
 );
 
 const Image = styled.img(
   () => css`
     width: 330px;
+    @media (max-width: 450px) {
+      width: 290px;
+    }
+    @media (max-width: 350px) {
+      width: 270px;
+    }
   `
 );
 
@@ -73,6 +85,12 @@ const ImageWrapper = styled.div(
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 450px) {
+      width: 320px;
+    }
+    @media (max-width: 350px) {
+      width: 300px;
+    }
   `
 );
 

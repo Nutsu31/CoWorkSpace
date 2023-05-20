@@ -48,5 +48,12 @@ const AboutUsCss = styled.div(
     display: flex;
     justify-content: center;
     gap: 120px;
+    @media (max-width: 1380px) {
+      gap: 60px;
+    }
+    @media (max-width: 1230px) {
+      gap: 40px;
+      flex-wrap: wrap;
+    }
   `
 );
