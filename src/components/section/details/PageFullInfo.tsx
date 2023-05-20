@@ -27,6 +27,7 @@ const PageFullInfo = ({
         top: "0",
         left: "0",
         backgroundColor: "rgba(18, 59, 83, 1)",
+        border: "1px solid #72bde9",
         borderRadius: 20,
         padding: "60px 20px",
       }}
