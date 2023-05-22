@@ -23,9 +23,7 @@ const LogIn = () => {
   const [userData, setUserData] = useState<UserDataType>(initialValue);
   const navigate = useNavigate();
 
-  console.log(userData);
   const onSubmit = handleSubmit((data) => {
-    console.log(data);
     axios({
       method: "POST",
       url: baseURL + "/login",
@@ -45,10 +43,25 @@ const LogIn = () => {
     });
   });
 
+  function setLocalAdmin(boolean: boolean, user: string) {
+    localStorage.setItem(
+      "adminLogIn",
+      JSON.stringify({ logged: boolean, user: user })
+    );
+  }
+  function setLocalUser(boolean: boolean, user: string) {
+    localStorage.setItem(
+      "userLogIn",
+      JSON.stringify({ logged: boolean, user: user })
+    );
+  }
+
   function getUserDetails() {
     if (userData.isAdmin) {
+      setLocalAdmin(true, "admin");
       navigate("/admin-panel");
     } else if (userData.status === 200) {
+      setLocalUser(true, "commonUser");
       navigate("/profile");
     }
   }

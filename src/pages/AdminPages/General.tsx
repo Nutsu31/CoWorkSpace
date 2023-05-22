@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { Person } from "@mui/icons-material";
 import { baseURL } from "../Root";
 import axios from "axios";
-import { UserType } from "../AdminRoot";
+import { UserType } from "./AdminRoot";
 
 const General = () => {
   const [admins, setAdmins] = useState<Array<UserType>>([]);

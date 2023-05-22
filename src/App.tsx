@@ -11,12 +11,13 @@ import AboutUs from "./pages/AboutUs";
 import Contact from "./pages/Contact";
 import JoisUs from "./pages/JoisUs";
 import LogIn from "./pages/LogIn";
-import UserInterface from "./pages/UserInterface";
-import AdminRoot from "./pages/AdminRoot";
+import AdminRoot from "./pages/AdminPages/AdminRoot";
 import General from "./pages/AdminPages/General";
 import Statistics from "./pages/AdminPages/Statistics";
 import Users from "./pages/AdminPages/Users";
 import HomePage from "pages/HomePage";
+import UserPanelRoot from "pages/UserPage/UserPanelRoot";
+import UserGeneral from "pages/UserPage/UserGeneral";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,7 +28,6 @@ const router = createBrowserRouter(
         <Route path="/contact" element={<Contact />} />
         <Route path="/join-us" element={<JoisUs />} />
         <Route path="/log-in" element={<LogIn />} />
-        <Route path="/profile" element={<UserInterface />} />
       </Route>
 
       <Route path="/admin-panel" element={<AdminRoot />}>
@@ -35,6 +35,10 @@ const router = createBrowserRouter(
         <Route path="/admin-panel/general" element={<General />} />
         <Route path="/admin-panel/statistics" element={<Statistics />} />
         <Route path="/admin-panel/users" element={<Users />} />
+      </Route>
+
+      <Route path="/profile" element={<UserPanelRoot />}>
+        <Route index element={<UserGeneral />} />
       </Route>
     </>
   )

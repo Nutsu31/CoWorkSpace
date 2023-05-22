@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoute = () => {
-  const [logedIn, setLogedIn] = useState(true);
+  function getItemsFromLocalStorage() {
+    const data = JSON.parse(localStorage.getItem("adminLogIn")!);
+    return data?.logged;
+  }
 
-  return <>{logedIn ? <Outlet /> : <Navigate to="/log-in" />}</>;
+  return (
+    <>{getItemsFromLocalStorage() ? <Outlet /> : <Navigate to="/log-in" />}</>
+  );
 };
 
 export default PrivateRoute;
