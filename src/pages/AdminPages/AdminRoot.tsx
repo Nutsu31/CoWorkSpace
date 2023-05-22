@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
-import Dashboard from "../components/admin/Dashboard";
-import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../../components/admin/Dashboard";
+import PrivateRoute from "../PrivateRoute";
 export interface UserType {
   name: string;
   lastname: string;
@@ -11,6 +11,8 @@ export interface UserType {
 }
 
 const AdminRoot = () => {
+  // const logIn = useContext(logedInContext);
+
   return (
     <AdminRootContainer>
       <Dashboard />

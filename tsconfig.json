@@ -4,7 +4,7 @@
     "baseUrl": "src",
     "paths": {
       "components/*":["./components/*", "/components"],
-      "assets/*":["./assets/*", "/assets"]
+      "assets/*":["./assets/*", "/assets"],
     },
     "lib": [
       "dom",

@@ -2,9 +2,22 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import Logo from "../header/Logo";
 import EachLists from "./EachLists";
+import { Button } from "@mui/material";
+import { Logout } from "@mui/icons-material";
+import { useNavigate } from "react-router";
 
 const Dashboard = () => {
   const [active, setActive] = useState(1);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    localStorage.setItem(
+      "adminLogIn",
+      JSON.stringify({ logged: false, user: undefined })
+    );
+    navigate("/log-in");
+  };
+
   return (
     <Container>
       <Logo />
@@ -30,6 +43,10 @@ const Dashboard = () => {
           setActive={setActive}
           active={active}
         />
+        <Button variant="contained" onClick={handleLogOut}>
+          <Logout />
+          გასვლა
+        </Button>
       </ListsWrapper>
     </Container>
   );

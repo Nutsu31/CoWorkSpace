@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import { UserType } from "../AdminRoot";
+import { UserType } from "./AdminRoot";
 import axios from "axios";
 import { baseURL } from "../Root";
 import { Person } from "@mui/icons-material";
