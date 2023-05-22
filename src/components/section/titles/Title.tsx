@@ -1,5 +1,6 @@
 import InfoButton from "components/buttons/InfoButton";
 import JoinUsButton from "components/buttons/JoinUsButton";
+import AnimationSection from "components/motions/AnimationSection";
 import React from "react";
 import styled, { css } from "styled-components";
 interface TitleTypes {
@@ -13,18 +14,20 @@ interface TitleTypes {
 
 const Title = ({ text }: TitleTypes) => {
   return (
-    <TextWrapper>
-      <Text>
-        {text.styledText}
-        <TextWtihe>{text.unStyledText}</TextWtihe>
-      </Text>
-      <Paragraph>{text.paragraph}</Paragraph>
-      {text.paragraph2 ? <Paragraph>{text.paragraph2}</Paragraph> : null}
-      <ButtonWrapper>
-        <JoinUsButton num={2} />
-        <InfoButton />
-      </ButtonWrapper>
-    </TextWrapper>
+    <AnimationSection>
+      <TextWrapper>
+        <Text>
+          {text.styledText}
+          <TextWtihe>{text.unStyledText}</TextWtihe>
+        </Text>
+        <Paragraph>{text.paragraph}</Paragraph>
+        {text.paragraph2 ? <Paragraph>{text.paragraph2}</Paragraph> : null}
+        <ButtonWrapper>
+          <JoinUsButton num={2} />
+          <InfoButton />
+        </ButtonWrapper>
+      </TextWrapper>
+    </AnimationSection>
   );
 };
 

@@ -3,6 +3,7 @@ import Banner from "components/section/Banner";
 import styled, { css } from "styled-components";
 import HomeBanner from "../assets/banner.png";
 import Title from "components/section/titles/Title";
+import UseInView from "components/motions/AnimationSection";
 
 interface HomePageType {
   banner: string;

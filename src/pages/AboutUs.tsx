@@ -11,12 +11,13 @@ import {
   aboutUsTitle3,
   aboutUsTitle4,
 } from "components/aboutUs/AboutTexts";
+import AnimationSection from "components/motions/AnimationSection";
 
 const AboutUs = () => {
   const [showFullDetails, setShowFullDetails] = useState(0);
 
   return (
-    <div>
+    <AnimationSection>
       <AboutUsCss>
         <Container
           photo={photo1}
@@ -47,7 +48,7 @@ const AboutUs = () => {
           showFullDetails={showFullDetails}
         />
       </AboutUsCss>
-    </div>
+    </AnimationSection>
   );
 };
 

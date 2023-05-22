@@ -1,3 +1,4 @@
+import AnimationSection from "components/motions/AnimationSection";
 import React from "react";
 import styled, { css } from "styled-components";
 
@@ -6,11 +7,13 @@ interface BannerTypes {
 }
 const Banner = ({ banner }: BannerTypes) => {
   return (
-    <ImgWrapper>
-      <ImgWrapper innerDiv={true}>
-        <StyledImage src={banner} key="main banner" />
+    <AnimationSection>
+      <ImgWrapper>
+        <ImgWrapper innerDiv={true}>
+          <StyledImage src={banner} key="main banner" />
+        </ImgWrapper>
       </ImgWrapper>
-    </ImgWrapper>
+    </AnimationSection>
   );
 };
 

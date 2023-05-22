@@ -12,6 +12,7 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { baseURL } from "./Root";
+import AnimationSection from "components/motions/AnimationSection";
 
 interface Register {
   status: number;
@@ -70,85 +71,87 @@ const JoisUs = () => {
   }, [registerInfo]);
 
   return (
-    <FormWrapper>
-      <form onSubmit={onSubmit}>
-        <FormControl
-          fullWidth
-          sx={{
-            width: { xs: 300, sm: 350, md: 450, lg: 500 },
-            minHeight: 500,
-            padding: "40px 20px",
-            backgroundColor: "rgba(193, 193, 193, 1)",
-            display: "flex",
-            alignItems: "center",
-            gap: 2,
-            borderRadius: 2,
-          }}
-        >
-          <h1>რეგისტრაცია</h1>
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="სახელი"
-            type="text"
-            {...register("name", { required: true })}
-          />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="გვარი"
-            type="text"
-            {...register("lastname", { required: true })}
-          />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="ელ.ფოსტა"
-            type="email"
-            {...register("email", { required: true })}
-          />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="პაროლი"
-            type="password"
-            {...register("password", { required: true })}
-          />
-          <TextField
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            label="გაიმეორე პაროლი"
-            type="password"
-            {...register("re_password", { required: true })}
-          />
-
-          <FormControl sx={{ display: "flex", alignItems: "center" }}>
-            <InputLabel id="select-label">დეველოპერის პოზიცია</InputLabel>
-            <Select
-              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-              labelId="select-label"
-              label="დეველოპერის პოზიცია"
-              {...register("developer")}
-            >
-              <MenuItem value="Front-end">Front-end Developer</MenuItem>
-              <MenuItem value="Back-end">Back-end Developer</MenuItem>
-              <MenuItem value="Full-stack">Full-stack Developer</MenuItem>
-            </Select>
-          </FormControl>
-          {registerInfo ? (
-            <SuccessText status={registerInfo.status}>
-              {registerInfo.user}
-            </SuccessText>
-          ) : null}
-
-          <Button
-            sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
-            variant="contained"
-            type="submit"
+    <AnimationSection>
+      <FormWrapper>
+        <form onSubmit={onSubmit}>
+          <FormControl
+            fullWidth
+            sx={{
+              width: { xs: 300, sm: 350, md: 450, lg: 500 },
+              minHeight: 500,
+              padding: "40px 20px",
+              backgroundColor: "rgba(193, 193, 193, 1)",
+              display: "flex",
+              alignItems: "center",
+              gap: 2,
+              borderRadius: 2,
+            }}
           >
-            რეგისტრაცია
-          </Button>
-          <Link style={{ color: "#3789e7" }} to="/log-in">
-            შესვლა
-          </Link>
-        </FormControl>
-      </form>
-    </FormWrapper>
+            <h1>რეგისტრაცია</h1>
+            <TextField
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              label="სახელი"
+              type="text"
+              {...register("name", { required: true })}
+            />
+            <TextField
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              label="გვარი"
+              type="text"
+              {...register("lastname", { required: true })}
+            />
+            <TextField
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              label="ელ.ფოსტა"
+              type="email"
+              {...register("email", { required: true })}
+            />
+            <TextField
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              label="პაროლი"
+              type="password"
+              {...register("password", { required: true })}
+            />
+            <TextField
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              label="გაიმეორე პაროლი"
+              type="password"
+              {...register("re_password", { required: true })}
+            />
+
+            <FormControl sx={{ display: "flex", alignItems: "center" }}>
+              <InputLabel id="select-label">დეველოპერის პოზიცია</InputLabel>
+              <Select
+                sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+                labelId="select-label"
+                label="დეველოპერის პოზიცია"
+                {...register("developer")}
+              >
+                <MenuItem value="Front-end">Front-end Developer</MenuItem>
+                <MenuItem value="Back-end">Back-end Developer</MenuItem>
+                <MenuItem value="Full-stack">Full-stack Developer</MenuItem>
+              </Select>
+            </FormControl>
+            {registerInfo ? (
+              <SuccessText status={registerInfo.status}>
+                {registerInfo.user}
+              </SuccessText>
+            ) : null}
+
+            <Button
+              sx={{ width: { xs: 200, sm: 250, md: 300, lg: 400 } }}
+              variant="contained"
+              type="submit"
+            >
+              რეგისტრაცია
+            </Button>
+            <Link style={{ color: "#3789e7" }} to="/log-in">
+              შესვლა
+            </Link>
+          </FormControl>
+        </form>
+      </FormWrapper>
+    </AnimationSection>
   );
 };
 
